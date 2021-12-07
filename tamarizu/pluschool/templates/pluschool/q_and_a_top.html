@@ -1,0 +1,54 @@
+{% extends 'pluschool/base.html' %}
+{% load static %}
+{%block extra_head %}
+    <link rel="stylesheet" href={% static 'pluschool/css/q_and_a_top.css' %}>
+    <script type="text/javascript" src="./js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-ui-1.8.13.custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui-1.8.13.custom.css">
+    <script type="text/javascript" src="./js/ui.dropdownchecklist-1.4-min.js"></script>
+{% endblock %}
+
+{% block nav %}<!--これは管理者のメニューのため表示なし-->{% endblock %}　
+
+    {% block content %}
+    <div class="q-top">
+        <div class="q-upper-part">
+
+            <form class="q-search" method="GET">
+                <input class="form-control me-2" type="search" placeholder="検索" aria-label="Search" name="search">
+                <button class="btn btn-outline-light" type="submit">🔍</button>
+            </form>
+            <button class="q-button">質問する</button>
+            <select class="q-pulldown" >
+                <option value="選択肢1">ステータス・カテゴリを選択してください</option>
+                <option value="選択肢2">あほ</option>
+                <option value="選択肢3">まぬけ</option>
+            </select>
+        </div>
+
+        <!--ドロップダウンチェックリスト-->
+
+        <div class="q-top-main">
+
+                <table class="new-q">
+                    <tr>
+                        <th>新着質問</th>
+                    </tr>
+
+                    <tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr>
+
+                </table>
+
+                <table class="recommendation-q">
+                    <tr>
+                        <th>おすすめ質問</th>
+                    </tr>
+
+                    <tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr><tr><td>ゲッツ！</td></tr>
+
+
+                </table>
+
+        </div>
+    </div>
+    {% endblock %}

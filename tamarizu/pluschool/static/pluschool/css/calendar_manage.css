@@ -1,0 +1,110 @@
+
+
+
+.group_list{
+    background-color: #e2f7ff;
+    margin-left: 270px;
+    height: 100%;
+    width: 230px;
+    position: fixed;
+
+}
+
+.create_group{
+    background-color: cornflowerblue;
+    color: #ffffff;
+    padding: 10px;
+    text-align:center;		/*センタリング*/
+	text-indent:0;	
+    margin-left: 30px;
+
+
+}
+
+.group_list div{
+    margin: 2em;
+}
+
+
+/* グループチェックボックスのリスト */
+
+.group_list input[type="checkbox"]{
+    display: none;
+}
+/* チェックボックスの代わりを成すラベル */
+.group_list input[type="checkbox"]+label{
+    display: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 10px;
+}
+
+/* ラベルの左に表示させる正方形のボックス□ */
+.group_list input[type="checkbox"]+label::before{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    left: 0;
+    top: 50%;
+    border: 1px solid;
+
+}
+
+.group_list .user input[type="checkbox"]+label::before{
+    border-color:  rgb(245, 189, 105);
+    background-color: rgb(245, 189, 105); 
+}
+.group_list .class input[type="checkbox"]+label::before{
+    border-color:  rgb(0, 153, 255);
+    background-color: rgb(0, 153, 255); 
+}
+
+.group_list .group input[type="checkbox"]+label::before{
+    border-color:  rgb(243, 255, 69);
+    background-color: rgb(243, 255, 69);
+}
+
+
+
+/* チェックが入った時のレ点 */
+.group_list input[type="checkbox"]:checked+label::after{
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    width: 18px;
+    height: 9px;
+    margin-top: -9px;
+    top: 50%;
+    left: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color:  #ffffff; /* チェックの色変更 お好きな色を */
+}
+
+.group_list input[type="checkbox"]+label:before{
+    border-radius: 50%;
+}
+
+
+.calendar{
+    background-color: #ffffff;
+    margin-left: 500px;
+    height: 100%;
+    width: 1000px;
+    position: fixed;
+    display: inline-block;
+    
+}
+
+.calendar tr{
+    border:rgb(0, 0, 0);
+}
+

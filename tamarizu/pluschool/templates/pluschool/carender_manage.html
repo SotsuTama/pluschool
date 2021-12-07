@@ -1,0 +1,119 @@
+{% extends 'pluschool/base.html' %}
+{% load static %}
+{%block extra_head %}
+    <link rel="stylesheet" href= "{% static 'pluschool/css/calendar_manage.css' %}">
+{% endblock %}
+
+
+    {% block content %}
+
+    <div class="group_list">
+        
+        <input class="create_group" type="button" value="グループを作成">
+
+
+        <div class="user">
+        <P>個人用の予定表</P>
+        <!-- ログインユーザID -->
+            <input class="user" type="checkbox" id="user" />
+                <label for="user">予定表</label>
+        </div>
+
+        <div class="class">
+        <P>クラスの予定表</P>
+        <!-- 所属クラスを取得して表示 -->
+            <input type="checkbox" id="class" />
+                <label for="class">取得したクラス</label>
+        </div>
+
+        <div class="group">
+        <p>グループ</p>
+        <!-- 所属グループを取得して表示 全件表示-->
+        <input type="checkbox" id="group" />
+            <label for="group">取得したグループ</label>
+            <input type="checkbox" id="group1" />
+            <label for="group1">取得したグループ</label>      
+            <input type="checkbox" id="group2" />
+            <label for="group2">取得したグループ</label>      
+            <input type="checkbox" id="group3" />
+            <label for="group3">取得したグループ</label>      
+            <input type="checkbox" id="group4" />
+            <label for="group4">取得したグループ</label>      
+        </div>
+        
+
+
+    </div>
+
+
+    <div>
+        <table class="calendar">
+            <tr>
+                <th>日</th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+
+            </tr>
+            <tr>
+                <td>ああああああああ</td>
+                <td>ああああああああ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        
+        </table>
+    </div>
+
+    {% endblock %}

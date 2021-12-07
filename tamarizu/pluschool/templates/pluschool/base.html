@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utr=8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'pluschool/css/style.css' %}" />
+        {% block extra_head%}{% endblock %}
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="http://localhost:8000/pluschool"><img src="{% static 'pluschool/image/pluschool.png'%}" alt="pluschool"></a>
+        </div>
+    </header>
+    {% block nav %}
+    <nav>
+        <ul class="p">
+            <li class="item paritem"><p class="item-title">時間割管理</p></li>
+            <li class="item"><a><p class="item-sub-title">時間割マスタ一覧</p></a></li>
+            <li class="item"><a><p class="item-sub-title">時間割マスタ登録</p></a></li>
+            <li class="item"><a><p class="item-sub-title">時間割共有</p></a></li>
+            <li class="item paritem"><p class="item-title">カレンダー管理</p></li>
+            <li class="item"><a><p class="item-sub-title">スケジュール・リマインダー</p></a></li>
+            <li class="item paritem"><p class="item-title">質問管理</p></li>
+            <li class="item"><a><p class="item-sub-title">カテゴリ管理</p></a></li>
+            <li class="item"><a><p class="item-sub-title">NGワード管理</p></a></li>
+            <li class="item"><a><p class="item-sub-title">通報管理</p></a></li>
+            <li class="item paritem"><p class="item-title">ユーザ管理</p></li>
+            <li class="item"><a><p class="item-sub-title">学生管理</p></a></li>
+            <li class="item"><a><p class="item-sub-title">教員管理</p></a></li>
+            <li class="item"><a><p class="item-sub-title">アカウント情報</p></a></li>
+        </ul>
+    </nav>
+    {% endblock %}
+
+    {% block hamburger-menu %}
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check" class="check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>
+
+            <!--メニュー-->
+            <div class="menu-content">
+                <p>MENU</p>
+                <ul>
+                    <li>
+                        <a href="#">アカウント詳細</a>
+                    </li>
+                    <li>
+                        <a href="#">質問TOP</a>
+                    </li>
+                    <li>
+                        <a href="#">カレンダー</a>
+                    </li>
+                    <li>
+                        <a href="#">質問回答履歴</a>
+                    </li>
+                    <li>
+                        <a href="#">ログアウト</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endblock %}
+
+    <div class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+<!--
+<footer>
+    <p>Copyright KCS鹿児島情報専門学校 All Rights Reserved.</p>
+</footer>-->
+</html>

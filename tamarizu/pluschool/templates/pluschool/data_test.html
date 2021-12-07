@@ -1,0 +1,28 @@
+{% extends 'pluschool/base.html' %}
+{% load static %}
+{%block extra_head %}
+<link rel="stylesheet" href={% static 'pluschool/css/data_test.css' %}>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="datatest">
+<table>
+    <tr>
+        <th>ID</th>
+        <th>NGword</th>
+
+    </tr>
+    {% for item in data %}
+    <tr>
+        <td>{{item.ng_word_id}}</td>
+        <td>{{item.ng_word}}</td>
+    </tr>
+    {% endfor %}
+    
+
+</table>
+
+</div>
+{% endblock %}
